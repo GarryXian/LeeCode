@@ -34,6 +34,7 @@ public class IsHappy {
         return isHappy(n,resultSet );
     }
 
+    // 不快乐数, 计算结果会重复, 以此来跳出递归
     private static boolean isHappy(int n , HashSet<Integer> set){
         boolean flag = false;
         String str = n + "";
