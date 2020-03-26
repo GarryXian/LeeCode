@@ -22,12 +22,12 @@ public class MaxPoints {
         int[][] points = {{0,0},{94911151,94911150},{94911152,94911151}};
 //        int[][] points = {{0, 0}, {0, 0}, {0, 0}};
 //        int[][] points = {{0, -1}, {0, 3}, {0, -4}, {0, -2}, {0, -4}, {0, 0}, {0, 0}, {0, 1}, {0, -2}, {0, 4}};
-        System.out.println(maxPointsRefactor(points));
+        System.out.println(maxPoints(points));
     }
 
     // 更换解题方法, 暴力解题, 保存线上的所有点,
     // 定义直线的数据结构: 端点(数组下标), 斜率, 线上坐标的数量, 使用Map存储, key 为 端点下标 + 斜率 拼接字符串
-    public static int maxPointsRefactor(int[][] points) {
+    public static int maxPoints(int[][] points) {
         Map<Integer, Integer> eachMaxPoints = new HashMap<>();
         for (int i = 0; i < points.length; i++) {
             Map<String, Integer> lineMap = new HashMap<>();
