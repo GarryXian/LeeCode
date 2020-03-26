@@ -35,7 +35,7 @@ public class NumberOfBoomerangs {
                 Double aDouble = calDistance(pointA, pointB);
                 if (tmpMap.containsKey(aDouble)) {
                     Integer existNodeNum = tmpMap.get(aDouble);
-                    // 排列组合问题, 取与当前中间点相同距离的点数量 * 2 即可
+                    // 关键: !!!排列组合问题, 取与当前中间点相同距离的点数量 * 2 即可
                     count  = count + (existNodeNum *2);
                     tmpMap.put(aDouble, (existNodeNum + 1));
                 } else {
