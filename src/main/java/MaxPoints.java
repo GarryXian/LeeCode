@@ -26,7 +26,7 @@ public class MaxPoints {
         System.out.println(maxPointsOp(points));
     }
 
-    public int maxPointsOp(int[][] points) {
+    public static int maxPointsOp(int[][] points) {
         if (points.length < 3) {
             return points.length;
         }
@@ -59,7 +59,7 @@ public class MaxPoints {
         return res;
     }
 
-    private int gcd(int a, int b) {
+    private static int gcd(int a, int b) {
         while (b != 0) {
             int temp = a % b;
             a = b;
