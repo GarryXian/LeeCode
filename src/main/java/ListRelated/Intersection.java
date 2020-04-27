@@ -21,7 +21,7 @@ public class Intersection {
 
     // 简单求两个数组的交集
     public static int[] intersect1(int[] nums1, int[] nums2) {
-        Set<Integer> result = new HashSet<>();
+        Set<Integer> result = new HashSet<Integer>();
         for (int i : nums1) {
             for (int j : nums2) {
                 if (i == j) {
@@ -42,9 +42,9 @@ public class Intersection {
     // 输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致。
     // 我们可以不考虑输出结果的顺序。
     public static int[] intersect2(int[] nums1, int[] nums2) {
-        List<Integer> resultList = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<Integer>();
         // 1. 取出集合1中的一个元素, 判断集合2中是否有相同元素
-        Set<Integer> tmpList = new HashSet<>();
+        Set<Integer> tmpList = new HashSet<Integer>();
         for (int i : nums1) {
             for (int j : nums2) {
                 if (i == j) {
@@ -54,7 +54,7 @@ public class Intersection {
             }
         }
         // 2. 有相同元素, 计算集合1 和 集合2 中此元素的重复次数, 取最小值
-        Map<Integer, Integer> resultConutMap = new HashMap<>();
+        Map<Integer, Integer> resultConutMap = new HashMap<Integer, Integer>();
         Iterator<Integer> iterator = tmpList.iterator();
         while (iterator.hasNext()) {
             Integer next = iterator.next();

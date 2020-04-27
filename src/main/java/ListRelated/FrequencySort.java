@@ -17,7 +17,7 @@ public class FrequencySort {
 
     public static String frequencySort(String s) {
         char[] chars = s.toCharArray();
-        Map<Character, Integer> tmpMap = new HashMap<>();
+        Map<Character, Integer> tmpMap = new HashMap<Character, Integer>();
         for (char aChar : chars) {
             if (tmpMap.containsKey(aChar)) {
                 Integer count = tmpMap.get(aChar);
@@ -28,7 +28,7 @@ public class FrequencySort {
         }
         // 排序
         Set<Map.Entry<Character, Integer>> entries = tmpMap.entrySet();
-        List<Map.Entry<Character, Integer>> list = new ArrayList<>();
+        List<Map.Entry<Character, Integer>> list = new ArrayList<Map.Entry<Character, Integer>>();
         for (Map.Entry<Character, Integer> entry : entries) {
             list.add(entry);
         }

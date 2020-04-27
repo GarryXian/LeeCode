@@ -33,13 +33,13 @@ public class GroupAnagrams {
     }
 
     public static List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> tmpList = new ArrayList<>();
-        Map<String, String> map = new HashMap<>();
+        List<List<String>> tmpList = new ArrayList<List<String>>();
+        Map<String, String> map = new HashMap<String, String>();
         for (int i = 0; i < strs.length; i++) {
             if (map.containsKey(strs[i])) {
                 continue;
             }
-            List<String> stringList = new ArrayList<>();
+            List<String> stringList = new ArrayList<String>();
             stringList.add(strs[i]);
             for (int j = (i + 1); j < strs.length; j++) {
 
@@ -59,7 +59,7 @@ public class GroupAnagrams {
             return false;
         }
         // 使用同一个计数器
-        Map<Character, Integer> tmpMap = new HashMap<>();
+        Map<Character, Integer> tmpMap = new HashMap<Character, Integer>();
         char[] chars1 = s.toCharArray();
         char[] chars2 = t.toCharArray();
         for (char c : chars1) {

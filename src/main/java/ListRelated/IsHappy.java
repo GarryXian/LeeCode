@@ -31,7 +31,7 @@ public class IsHappy {
     }
 
     public static boolean isHappy(int n) {
-        HashSet<Integer> resultSet = new HashSet<>();
+        HashSet<Integer> resultSet = new HashSet<Integer>();
         resultSet.add(Integer.valueOf(n));
         return isHappy(n,resultSet );
     }
@@ -40,7 +40,7 @@ public class IsHappy {
     private static boolean isHappy(int n , HashSet<Integer> set){
         boolean flag = false;
         String str = n + "";
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         for (int i = 0; i < str.length(); i++) {
             if (i != str.length() - 1) {
                 list.add(Integer.valueOf(str.substring(i, i + 1)));

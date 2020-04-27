@@ -28,9 +28,9 @@ public class TreeSum {
      * @return
      */
     public static List<List<Integer>> threeSum(int[] nums) {
-        Set<List<Integer>> resultSet = new HashSet<>();
+        Set<List<Integer>> resultSet = new HashSet<List<Integer>>();
         // 升序
-        List<Integer> tmpList = new ArrayList<>();
+        List<Integer> tmpList = new ArrayList<Integer>();
         for (int num : nums) {
             tmpList.add(num);
         }
@@ -64,7 +64,7 @@ public class TreeSum {
                     pointC--;
                 }
                 if (pointAValue == -(pointBValue + pointCValue)) {
-                    List<Integer> list = new ArrayList<>();
+                    List<Integer> list = new ArrayList<Integer>();
                     list.add(tmpList.get(pointA));
                     list.add(tmpList.get(pointB));
                     list.add(tmpList.get(pointC));
@@ -76,7 +76,7 @@ public class TreeSum {
             // 指针B = 指针C 时, 如
 
         }
-        List<List<Integer>> resultList = new ArrayList<>();
+        List<List<Integer>> resultList = new ArrayList<List<Integer>>();
         resultList.addAll(resultSet);
         return resultList;
     }

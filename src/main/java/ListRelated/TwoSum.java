@@ -37,7 +37,7 @@ public class TwoSum {
      * @return
      */
     public static int[] twoSumUsingHash(int[] nums, int target) {
-        Map<Integer, Integer> tmpMap = new HashMap<>();
+        Map<Integer, Integer> tmpMap = new HashMap<Integer, Integer>();
         int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
             int tmp = target - nums[i];

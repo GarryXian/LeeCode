@@ -56,7 +56,7 @@ public class Isomorphic {
     }
 
     private static Map<Integer, List<Integer>> getDictMap(String s) {
-        Map<Integer, List<Integer>> tmpMap = new HashMap<>();
+        Map<Integer, List<Integer>> tmpMap = new HashMap<Integer, List<Integer>>();
         char[] charArray1 = s.toCharArray();
         for (int i = 0; i < charArray1.length; i++) {
 
@@ -77,7 +77,7 @@ public class Isomorphic {
                         list.add(j);
                         tmpMap.put(i, list);
                     } else {
-                        List<Integer> list = new ArrayList<>();
+                        List<Integer> list = new ArrayList<Integer>();
                         list.add(j);
                         tmpMap.put(i, list);
                     }

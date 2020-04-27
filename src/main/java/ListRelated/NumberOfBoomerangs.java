@@ -27,7 +27,7 @@ public class NumberOfBoomerangs {
     public static int numberOfBoomerangsOP(int[][] points) {
         int count = 0;
         for (int i = 0; i < points.length; i++) {
-            Map<Double, Integer> tmpMap = new HashMap<>();
+            Map<Double, Integer> tmpMap = new HashMap<Double, Integer>();
             int[] pointA = points[i];
             for (int j = 0; j < points.length; j++) {
                 if (i == j) {

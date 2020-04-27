@@ -27,8 +27,8 @@ public class FourSum {
      * @return
      */
     public static List<List<Integer>> fourSum(int[] nums, int target) {
-        Set<List<Integer>> resultSet = new HashSet<>();
-        List<Integer> list = new ArrayList<>();
+        Set<List<Integer>> resultSet = new HashSet<List<Integer>>();
+        List<Integer> list = new ArrayList<Integer>();
         for (int num : nums) {
             list.add(num);
         }
@@ -81,7 +81,7 @@ public class FourSum {
                         break;
                     }
                     if (aValue + bValue + cValue == target) {
-                        List<Integer> tmpList = new ArrayList<>();
+                        List<Integer> tmpList = new ArrayList<Integer>();
                         tmpList.add(list.get(pointA));
                         tmpList.add(list.get(pointAa));
                         tmpList.add(bValue);
@@ -100,7 +100,7 @@ public class FourSum {
                 }
             }
         }
-        List<List<Integer>> resultList = new ArrayList<>();
+        List<List<Integer>> resultList = new ArrayList<List<Integer>>();
         resultList.addAll(resultSet);
         return resultList;
     }

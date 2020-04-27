@@ -33,7 +33,7 @@ public class FourSumPlus {
      * @return
      */
     public static int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         //Map<Integer, Integer> map = new HashMap<>();
         int res = 0;
         for(int i = 0;i<A.length;i++){

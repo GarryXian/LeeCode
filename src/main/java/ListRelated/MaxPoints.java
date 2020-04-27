@@ -37,7 +37,7 @@ public class MaxPoints {
         for (int i = 0; i < points.length; i++) {
             int duplicate = 0;
             int max = 0;//保存经过当前点的直线中，最多的点
-            HashMap<String, Integer> map = new HashMap<>();
+            HashMap<String, Integer> map = new HashMap<String, Integer>();
             for (int j = i + 1; j < points.length; j++) {
                 //求出分子分母
                 int x = points[j][0] - points[i][0];
@@ -72,9 +72,9 @@ public class MaxPoints {
 
     // 定义直线的数据结构: 端点(数组下标), 斜率, 线上坐标的数量, 使用Map存储, key 为 端点下标 + 斜率 拼接字符串
     public static int maxPoints(int[][] points) {
-        Map<Integer, Integer> eachMaxPoints = new HashMap<>();
+        Map<Integer, Integer> eachMaxPoints = new HashMap<Integer, Integer>();
         for (int i = 0; i < points.length; i++) {
-            Map<String, Integer> lineMap = new HashMap<>();
+            Map<String, Integer> lineMap = new HashMap<String, Integer>();
             int[] pointA = points[i];
             int duplicateCount = 0;
             for (int j = 0; j < points.length; j++) {

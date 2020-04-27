@@ -25,7 +25,7 @@ public class IsAnagram {
             return false;
         }
         // 使用同一个计数器
-        Map<Character, Integer> tmpMap = new HashMap<>();
+        Map<Character, Integer> tmpMap = new HashMap<Character, Integer>();
         char[] chars1 = s.toCharArray();
         char[] chars2 = t.toCharArray();
         for (char c : chars1) {
@@ -69,8 +69,8 @@ public class IsAnagram {
      */
     public static boolean isAnagram(String s, String t) {
         // 1. 计算字符串1 和 字符串2 中每个字母出现的次数
-        Map<Character, Integer> tmpMap1 = new HashMap<>();
-        Map<Character, Integer> tmpMap2 = new HashMap<>();
+        Map<Character, Integer> tmpMap1 = new HashMap<Character, Integer>();
+        Map<Character, Integer> tmpMap2 = new HashMap<Character, Integer>();
 
         char[] charArray1 = s.toCharArray();
         char[] charArray2 = t.toCharArray();
