@@ -11,27 +11,24 @@ import java.math.BigDecimal;
 public class PlusOne {
 
     public static void main(String[] args) {
-        int[] digits = {9,8,7,6,5,4,3,2,1,0};
+        int[] digits = {4,9,8};
         plusOne(digits);
+        System.out.println(digits.toString());
     }
 
+
     public static int[] plusOne(int[] digits) {
-        BigDecimal tmp = BigDecimal.ZERO;
-        for (int i = digits.length - 1; i >= 0; i--) {
-            // 倒序遍历
-            int digit = digits[i];
-            Double v = digit * Math.pow(10, (digits.length - 1 - i));
-            tmp = tmp.add(BigDecimal.valueOf(v));
+        int len = digits.length;
+        for(int i = len - 1; i >= 0; i--) {
+            digits[i]++;
+            // 对10 取余数, 如果为0, 则标识需进一位, 继续遍历
+            digits[i] %= 10;
+            if(digits[i]!=0)
+                // 加1后不为0, 不需进一位, 直接返回
+                return digits;
         }
-        tmp = tmp.add(BigDecimal.ONE);
-        // 转换为数组
-        tmp.setScale(0);
-        String tmpStr = tmp + "";
-        String[] split = tmpStr.split("");
-        int[] result = new int[tmpStr.length()];
-        for (int i = 0; i < split.length; i++) {
-            result[i] = Integer.valueOf(split[i]);
-        }
-        return result;
+        digits = new int[len + 1];
+        digits[0] = 1;
+        return digits;
     }
 }
