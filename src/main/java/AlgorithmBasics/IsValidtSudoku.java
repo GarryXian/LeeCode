@@ -15,68 +15,45 @@ import java.util.Map;
  */
 public class IsValidtSudoku {
 
+
     public static void main(String[] args) {
-        method(null);
-    }
-
-
-
-    public static void method(String param) {
-        switch (param) {
-            // 肯定不是进入这里
-            case "sth":
-                System.out.println("it's sth");
-                break;
-            // 也不是进入这里
-            case "null":
-                System.out.println("it's null");
-                break;
-            // 也不是进入这里
-            default:
-                System.out.println("default");
-        }
-    }
-
-
-
-//    public static void main(String[] args) {
-////        char[][] board = {
-////                {"5".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
-////                {"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],"5".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
-////                {".".toCharArray()[0],"9".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0]},
-////                {"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0]},
-////                {"4".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0]},
-////                {"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0]},
-////                {".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0]},
-////                {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"4".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"5".toCharArray()[0]},
-////                {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],"9".toCharArray()[0]}
-////        };
-////        char[][] board =
-////                {
-////                        {"8".toCharArray()[0], "3".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "7".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0]},
-////                        {"6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "1".toCharArray()[0], "9".toCharArray()[0], "5".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0]},
-////                        {".".toCharArray()[0], "9".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0]},
-////                        {"8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "3".toCharArray()[0]},
-////                        {"4".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], "3".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "1".toCharArray()[0]},
-////                        {"7".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "2".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0]},
-////                        {".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "2".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0]},
-////                        {".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "4".toCharArray()[0], "1".toCharArray()[0], "9".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "5".toCharArray()[0]},
-////                        {".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "7".toCharArray()[0], "9".toCharArray()[0]}
-////                };
+//        char[][] board = {
+//                {"5".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
+//                {"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],"5".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
+//                {".".toCharArray()[0],"9".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0]},
+//                {"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0]},
+//                {"4".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0]},
+//                {"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0]},
+//                {".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0]},
+//                {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"4".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"5".toCharArray()[0]},
+//                {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],"9".toCharArray()[0]}
+//        };
 //        char[][] board =
 //                {
-//                        {"5".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
-//                        {"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],"5".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
-//                        {".".toCharArray()[0],"9".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0]},
-//                        {"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0]},
-//                        {"4".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0]},
-//                        {"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0]},
-//                        {".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0]},
-//                        {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"4".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"5".toCharArray()[0]},
-//                        {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],"9".toCharArray()[0]}};
-//
-//        System.out.println(isValidSudoku(board));
-//    }
+//                        {"8".toCharArray()[0], "3".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "7".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0]},
+//                        {"6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "1".toCharArray()[0], "9".toCharArray()[0], "5".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0]},
+//                        {".".toCharArray()[0], "9".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0]},
+//                        {"8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "3".toCharArray()[0]},
+//                        {"4".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], "3".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "1".toCharArray()[0]},
+//                        {"7".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "2".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "6".toCharArray()[0]},
+//                        {".".toCharArray()[0], "6".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "2".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0]},
+//                        {".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "4".toCharArray()[0], "1".toCharArray()[0], "9".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "5".toCharArray()[0]},
+//                        {".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "8".toCharArray()[0], ".".toCharArray()[0], ".".toCharArray()[0], "7".toCharArray()[0], "9".toCharArray()[0]}
+//                };
+        char[][] board =
+                {
+                        {"5".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
+                        {"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],"5".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0]},
+                        {".".toCharArray()[0],"9".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0]},
+                        {"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0]},
+                        {"4".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],"3".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"1".toCharArray()[0]},
+                        {"7".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"6".toCharArray()[0]},
+                        {".".toCharArray()[0],"6".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"2".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0]},
+                        {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"4".toCharArray()[0],"1".toCharArray()[0],"9".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"5".toCharArray()[0]},
+                        {".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"8".toCharArray()[0],".".toCharArray()[0],".".toCharArray()[0],"7".toCharArray()[0],"9".toCharArray()[0]}};
+
+        System.out.println(isValidSudoku(board));
+    }
 
 
     /**
@@ -87,17 +64,17 @@ public class IsValidtSudoku {
      */
     public static boolean isValidSudoku(char[][] board) {
         Map<Map<Integer, Integer>, Character> coordinateMap = new HashMap<Map<Integer, Integer>, Character>();
-        for (int i = 0; i < board.length; i++) {
-            char[] subBord = board[i];
+        for (int v = 0; v < board.length; v++) {
+            char[] subBord = board[v];
 
-            for (int j = 0; j < subBord.length; j++) {
-                char c = subBord[j];
+            for (int h = 0; h < subBord.length; h++) {
+                char c = subBord[h];
                 if (c == ".".toCharArray()[0]) {
                     continue;
                 }
                 if (!coordinateMap.containsValue(c)) {
                     Map<Integer, Integer> cordMap = new HashMap<Integer, Integer>();
-                    cordMap.put(i, j);
+                    cordMap.put(v, h);
                     coordinateMap.put(cordMap, c);
                 } else {
                     for (Map.Entry<Map<Integer, Integer>, Character> mapCharacterEntry : coordinateMap.entrySet()) {
@@ -105,10 +82,44 @@ public class IsValidtSudoku {
                             Map<Integer, Integer> cord = mapCharacterEntry.getKey();
                             // 根据规则判断当前的坐标与cord的坐标是否符合规则
                             for (Map.Entry<Integer, Integer> integerIntegerEntry : cord.entrySet()) {
-                                Integer key = integerIntegerEntry.getKey();
-                                Integer value = integerIntegerEntry.getValue();
-
-                                if ((i <= key && key <= (i + 3)) || (j <= value && value <= (j + 3))) {
+                                Integer vertical = integerIntegerEntry.getKey();
+                                Integer horizonal = integerIntegerEntry.getValue();
+                                // 当前的坐标值mod 3, 根据结果判定时候在 3*3的区域中
+                                Integer hMod = h % 3;
+                                Integer vMod = v % 3;
+                                Boolean hFlag = true;
+                                Boolean vFlag = true;
+                                // 判定横坐标是否符合 3*3 区域
+                                switch (hMod){
+                                    case 0:
+                                        // 3*3 区域中第一个
+                                        hFlag = (horizonal - h) < 3 && (horizonal - h) >= 0;
+                                        break;
+                                    case 1:
+                                        // 3*3 区域中第二个, 是否相邻
+                                        hFlag = Math.abs(horizonal - h) == 1;
+                                        break;
+                                    case 2:
+                                        // 3*3 区域中第三个
+                                        hFlag = (h - horizonal) < 3 && (h - horizonal) >= 0 ;
+                                        break;
+                                }
+                                // 判定纵横坐标是否符合 3*3 区域
+                                switch (vMod){
+                                    case 0:
+                                        // 3*3 区域中第一个
+                                        vFlag = (vertical - v) < 3 && (vertical - v) >= 0;
+                                        break;
+                                    case 1:
+                                        // 3*3 区域中第二个, 是否相邻
+                                        vFlag = Math.abs(vertical - v) == 1;
+                                        break;
+                                    case 2:
+                                        // 3*3 区域中第三个
+                                        vFlag = (v - vertical) < 3 && (v - vertical) >= 0 ;
+                                        break;
+                                }
+                                if (hFlag && vFlag) {
                                     return false;
                                 }
                             }
