@@ -1,4 +1,4 @@
-package AlgorithmBasics;
+package AlgorithmBasics.Array;
 
 import java.util.HashMap;
 import java.util.Map;

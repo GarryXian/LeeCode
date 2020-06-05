@@ -1,4 +1,4 @@
-package AlgorithmBasics;
+package AlgorithmBasics.Array;
 
 /**
  * @author 冼家荣 xianjr1 xianjr1@meicloud.com

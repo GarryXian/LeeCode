@@ -1,4 +1,4 @@
-package AlgorithmBasics;
+package AlgorithmBasics.Array;
 
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
