@@ -38,8 +38,6 @@ public class CountAndSay {
         if (a == b) {
             ++count;
             count = countArray(charArray, (j + 1), count);
-        }else {
-            return count;
         }
         return count;
     }
